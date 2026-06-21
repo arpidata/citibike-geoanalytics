@@ -30,16 +30,33 @@ weather data and geospatial visualization tools.
 
 ```text
 citibike-geoanalytics/
-├── notebooks/
+│
+├── data/
+│   ├── citibike/               # Source Citi Bike monthly trip data (CSV files)
+│   │   ├── JC-202502-citibike-tripdata.csv
+│   │   ├── JC-202503-citibike-tripdata.csv
+│   │   └── ... [other monthly files]
+│   │
+│   ├── processed/              # Cleaned and engineered datasets
+│   │   └── citibike_cleaned.csv
+│   │
+│   └── raw/                    # Placeholder for unmodified raw source files
+│       └── .gitkeep
+│
+├── notebooks/                  # Data pipeline steps executed via Jupyter Notebooks
 │   ├── 01_data_collection.ipynb
-│   ├── 02_cleaning_and_features.ipynb
-│   ├── 03_weather_analysis.ipynb
-│   ├── 04_station_route_analysis.ipynb
-│   └── 05_geospatial_visualization.ipynb
-├── outputs/
-├── data/ ← not tracked (large files)
-├── requirements.txt
-└── README.md
+│   ├── 02_data_enrichment.ipynb
+│   ├── 03_weather_data.ipynb
+│   ├── 04_data_visualization.ipynb
+│   └── 05_neighborhood_analysis.ipynb
+│
+├── outputs/                    # Exported charts, maps, and reporting assets
+│   └── .gitkeep
+│
+├── .gitignore                  # Specifies intentionally untracked files to ignore
+├── README.md                   # Main documentation for the repository
+└── requirements.txt            # List of Python dependencies (pandas, numpy, etc.)
+
 
 ## Data Source
 
@@ -51,3 +68,4 @@ Weather data via [Open-Meteo Archive API](https://open-meteo.com/)
 ## Status
 
 🚧 In progress
+
