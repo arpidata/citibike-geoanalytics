@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Data files (large CSVs)
+data/citibike/*.csv
+data/citibike/*.zip
+data/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Kepler.gl exports
+*.html
+outputs/*.html
